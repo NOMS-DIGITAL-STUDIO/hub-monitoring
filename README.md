@@ -12,12 +12,6 @@ Heroku
 ----
 https://hub-monitor.herokuapp.com/circle
 
-Environment variable required by the application
-----
-```
-CIRCLE_CI_TOKEN - Your Circle CI Token
-This is used to call the Rest API on CircleCI.
-```
 
 Further Reading on Smashing
 ----
