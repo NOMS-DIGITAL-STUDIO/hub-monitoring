@@ -3,7 +3,7 @@ require 'httparty'
 
 projects = [
   { user: 'NOMS-DIGITAL-STUDIO', repo: 'hub-content-feed'},
-  { user: 'NOMS-DIGITAL-STUDIO', repo: 'hub-content-feed-ui'},
+  { user: 'NOMS-DIGITAL-STUDIO', repo: 'hub-admin'},
   { user: 'NOMS-DIGITAL-STUDIO', repo: 'hub-admin-ui'},
   { user: 'NOMS-DIGITAL-STUDIO', repo: 'hub-smoke-tests'},
   { user: 'NOMS-DIGITAL-STUDIO', repo: 'hub-function-test'},
