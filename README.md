@@ -4,6 +4,19 @@ Monitoring for the HUB, this use smashing which is forked from Dashing, as Dashi
 
 Currently only setup to monitor CircleCI builds, but its expected other pages will be added.
 
+Build
+----
+```
+gem install bundler
+bundle install
+```
+
+Run
+----
+```
+smashing start
+```
+
 Local
 ----
 http://localhost:3030/circle
