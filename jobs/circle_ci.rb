@@ -6,7 +6,7 @@ projects = [
   { user: 'NOMS-DIGITAL-STUDIO', repo: 'hub-admin'},
   { user: 'NOMS-DIGITAL-STUDIO', repo: 'hub-admin-ui'},
   { user: 'NOMS-DIGITAL-STUDIO', repo: 'hub-smoke-tests'},
-  { user: 'NOMS-DIGITAL-STUDIO', repo: 'hub-function-test'},
+  { user: 'NOMS-DIGITAL-STUDIO', repo: 'hub-feature-specs'},
 ]
 
 def duration(time)
