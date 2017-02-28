@@ -2,11 +2,11 @@ require 'httparty'
 # require 'digest/md5'
 
 projects = [
-  { user: 'NOMS-DIGITAL-STUDIO', repo: 'hub-content-feed'},
-  { user: 'NOMS-DIGITAL-STUDIO', repo: 'hub-admin'},
-  { user: 'NOMS-DIGITAL-STUDIO', repo: 'hub-admin-ui'},
-  { user: 'NOMS-DIGITAL-STUDIO', repo: 'hub-smoke-tests'},
-  { user: 'NOMS-DIGITAL-STUDIO', repo: 'hub-feature-specs'},
+  { user: 'noms-digital-studio', repo: 'hub-content-feed'},
+  { user: 'noms-digital-studio', repo: 'hub-admin'},
+  { user: 'noms-digital-studio', repo: 'hub-admin-ui'},
+  { user: 'noms-digital-studio', repo: 'hub-smoke-tests'},
+  { user: 'noms-digital-studio', repo: 'hub-feature-specs'},
 ]
 
 def duration(time)
