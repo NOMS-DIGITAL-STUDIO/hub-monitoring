@@ -35,7 +35,7 @@ servers = [
     {name: 'hub content feed ui', url: 'https://hub-content-feed-ui.herokuapp.com', method: 'http'},
 ]
  
-SCHEDULER.every '2m', :first_in => 0 do |job|
+SCHEDULER.every '15s', :first_in => 0 do |job|
     basic_auth = ENV['BASIC_AUTH']
 
     servers.each do |server|
