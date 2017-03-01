@@ -29,26 +29,32 @@ ping_count = 10
 #      the check will return false
 #
 servers = [
-    {name: 'hub admin ui', url: 'https://hub-admin-ui.herokuapp.com/health', method: 'http'},
+    {name: 'hub admin ui', url: 'https://hub-admin-ui.herokuapp.com/health', method: 'http', auth: true},
     {name: 'hub admin', url: 'https://hub-admin.herokuapp.com/hub-admin/health', method: 'http'},
     {name: 'hub content feed', url: 'https://hub-content-feed.herokuapp.com/health', method: 'http'},
     {name: 'hub content feed ui', url: 'https://hub-content-feed-ui.herokuapp.com', method: 'http'},
 ]
  
 SCHEDULER.every '2m', :first_in => 0 do |job|
-    # auth_token = ENV['BASIC_AUTH']
+    basic_auth = ENV['BASIC_AUTH']
 
     servers.each do |server|
         if server[:method] == 'http'
             begin
                 uri = URI.parse(server[:url])
+
                 http = Net::HTTP.new(uri.host, uri.port)
                 http.read_timeout = httptimeout
                 if uri.scheme == "https"
                     http.use_ssl=true
                     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
                 end
+
                 request = Net::HTTP::Get.new(uri.request_uri)
+                if server[:auth] == true
+                    request.basic_auth basic_auth.split(':').first, basic_auth.split(':').last
+                end
+
                 response = http.request(request)
 
                 if response.code == "200"
